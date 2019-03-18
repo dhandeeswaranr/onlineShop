@@ -11,23 +11,33 @@
     
       <mat-sidenav-container class="example-sidenav-container"
                              [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="1">
           <div class="user-prof">
           <div class="img-holder">
             <img class="img-round" src="https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"> 
-            <h6 class="text-center">Ramu S</h6>
-            <h6 class="text-center">Star Glocery Shop</h6>
+           
+          </div>
+          <div class="prof-det">
+            <h6 class="">Ramu S</h6>
+            <h6 class="">Star Glocery Shop</h6>
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
           </div>
           </div>
           <mat-nav-list (click)="snav.toggle()">
            <!-- <a mat-list-item routerLink="" *ngFor="let nav of fillerNav">{{nav}}</a> --> 
           
-           <a mat-list-item [routerLink]="['/landingpage/home']"><ion-icon class="list-icon" name="home"></ion-icon> Home</a>
-           <a mat-list-item [routerLink]="['/landingpage/product']"><ion-icon class="list-icon" name="basket"></ion-icon> Product</a>
-           <a mat-list-item [routerLink]="['/landingpage/job']"><ion-icon class="list-icon" name="glasses"></ion-icon>Jobs</a>
+           <a mat-list-item [routerLink]="['/landingpage/home']"><ion-icon class="list-icon" name="home"></ion-icon> My Products</a>
+           <a mat-list-item [routerLink]="['/landingpage/product']"><ion-icon class="list-icon" name="basket"></ion-icon>My Orders</a>
+           <a mat-list-item [routerLink]="['/landingpage/job']"><ion-icon class="list-icon" name="glasses"></ion-icon>Post Job</a>
            <a mat-list-item [routerLink]="['/landingpage']"><ion-icon class="list-icon" name="construct"></ion-icon> Update Password</a>
-           <a mat-list-item [routerLink]="['/landingpage/stock']"><ion-icon class="list-icon" name="settings"></ion-icon> Stock</a>
-           <a mat-list-item [routerLink]="['']"><ion-icon class="list-icon" name="key"></ion-icon> Logout</a>
+           <a mat-list-item [routerLink]="['/landingpage/stock']"><ion-icon class="list-icon" name="settings"></ion-icon> Business Profile</a>
+           <!--<a mat-list-item [routerLink]="['']"><ion-icon class="list-icon" name="key"></ion-icon> Logout</a>-->
           </mat-nav-list>
           <div class="ad-block">
             <div class="text-center btn-align">
@@ -35,6 +45,10 @@
             </div>
              <div class="ad-container">
               <img class="img-responsive" src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">              
+             </div>
+             <div class="holder">
+                <div class="holder-cont"><ion-icon class="list-icon" name="settings"></ion-icon>Settings</div>
+                <div class="holder-cont-2" [routerLink]="['']"><ion-icon class="list-icon" name="settings"></ion-icon>Logout</div>
              </div>
           </div>
           <div class="version">
