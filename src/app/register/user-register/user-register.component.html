@@ -1,0 +1,58 @@
+<div [style.height.px]="screenHeight" class="con" [style.width.px]="formWidth">
+<form  (ngSubmit)="onSubmit()">
+  <ion-card class="vc">
+    <ion-card-header>
+      <ion-card-title>
+        <div class="card_title">
+            Register
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+      <div class="signup-form" [style.width.px]="formWidth">
+        <label>User Name</label> <br/>
+        <input class="customInput" type="text" placeholder="Enter your user name">
+        <label>Mobile Number</label> <br/>
+        <input class="customInput" type="text" placeholder="Enter your mobile number">
+        <label>E-Mail</label> <br/>
+        <input class="customInput" type="email" placeholder="Enter your e-mail">
+        <label>Password</label> <br/>
+        <input class="customInput" type="password" placeholder="Enter your password">
+      </div>
+
+    <!-- <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="card_title">
+                <ion-icon class="user_photo"  name="person"></ion-icon>
+            </div>
+              <div>
+                  <ion-label>User Name</ion-label>
+                  <ion-input placeholder="Enter user name"></ion-input>
+              </div>
+              <div>
+                  <ion-label>Mobile Number</ion-label>
+                  <ion-input placeholder="Enter mobile number"></ion-input>
+              </div>
+              <div>
+                  <ion-label>E-Mail</ion-label>
+                  <ion-input placeholder="Enter your e-mail"></ion-input>
+              </div>
+              <div>
+                  <ion-label>Password</ion-label>
+                  <ion-input placeholder="Enter your e-mail" type="password"></ion-input>
+              </div>
+              <div>
+                  <ion-button color="danger" expand="full">
+                              Sign UP
+                  </ion-button>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  --> 
+      <div class="text-center">
+      <ion-button color="danger" expand="full" class="custom-button">Register</ion-button>
+      <ion-button color="danger" expand="full" class="custom-button" [routerDirection]="'root'" routerLink="">cancel</ion-button>
+    </div> 
+  </ion-card>
+</form>
+</div>

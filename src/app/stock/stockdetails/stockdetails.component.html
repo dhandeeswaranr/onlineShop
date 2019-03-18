@@ -1,0 +1,35 @@
+<ion-content>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-12">
+      <form (ngSubmit)="sumbit()"  #formBilling>
+        <div class="holder">
+          <ion-input placeholder="company name" [(ngModel)]="company" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input placeholder="category" [(ngModel)]="category" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input placeholder="sub category" [(ngModel)]="subCategory" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input placeholder="e-mail" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input placeholder="phone" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"></ion-input>
+        </div>
+          <!-- <label>Enter Company Name</label><br/>
+        <input type="text" [(ngModel)]="company" [ngModelOptions]="{standalone: true}"><br/>
+        <label>Enter Category</label><br/>
+        <input type="text" [(ngModel)]="category" [ngModelOptions]="{standalone: true}"><br/>
+        <label>Enter Sub category</label><br/>
+        <input type="text" [(ngModel)]="subCategory" [ngModelOptions]="{standalone: true}"><br/>
+        <label>Enter Email</label><br/>
+        <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"><br/>
+        <label>Enter phone</label><br/>
+        <input type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"><br/>  
+        <button>Submit</button>-->
+        <div class="text-center">
+              <button>
+                <ion-ripple-effect></ion-ripple-effect>
+                Submit
+              </button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+</ion-content>

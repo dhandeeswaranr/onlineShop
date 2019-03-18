@@ -1,0 +1,43 @@
+<div [style.height.px]="screenHeight" class="con">
+    <form  (ngSubmit)="onSubmit()">
+      <ion-card class="vc">
+        <ion-card-header>
+          <ion-card-title>
+            <div class="card_title">
+               Login
+                <!--<div class="texeture">
+                    <div class="content">
+                        <div class="content__container">
+                          <p class="content__container__text">
+                            Hello
+                          </p>
+                          
+                          <ul class="content__container__list">
+                            <li class="content__container__list__item">world !</li>
+                            <li class="content__container__list__item">bob !</li>
+                            <li class="content__container__list__item">users !</li>
+                            <li class="content__container__list__item">everybody !</li>
+                          </ul>
+                        </div>
+                      </div>
+                </div> -->
+            </div>
+            <div class="text-center">
+                <ion-icon class="user_photo"  name="person"></ion-icon>
+              </div>
+          </ion-card-title>
+        </ion-card-header>
+          <div class="signup-form" [style.width.px]="formWidth">
+            <label class="customLabel">User Name</label> <br/>
+            <input class="customInput" ([ngModel])="username" type="text" placeholder="Enter user name">
+            <label class="customLabel">Password</label> <br/>
+            <input class="customInput" ([ngModel])="password" type="password" placeholder="Enter user name" (change)="formSubmitValue()">
+            <div>
+              <ion-button color="danger"   expand="full" [routerDirection]="'root'" routerLink="/landingpage">Login</ion-button>
+              <ion-button color="danger"  expand="full" [routerDirection]="'root'" routerLink="/register">Sign Up</ion-button>
+            </div>
+          </div>
+       </ion-card>
+    </form>
+    </div>
+    

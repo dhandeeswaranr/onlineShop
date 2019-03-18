@@ -1,0 +1,53 @@
+
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+      <mat-toolbar color="darkcyan" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()" class="menu-btn"><mat-icon>menu</mat-icon></button>
+        <div>
+            <h1 class="example-app-name">Shop Cart</h1>
+        </div>
+        
+
+      </mat-toolbar>
+    
+      <mat-sidenav-container class="example-sidenav-container"
+                             [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+          <div class="user-prof">
+          <div class="img-holder">
+            <img class="img-round" src="https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"> 
+            <h6 class="text-center">Ramu S</h6>
+            <h6 class="text-center">Star Glocery Shop</h6>
+          </div>
+          </div>
+          <mat-nav-list (click)="snav.toggle()">
+           <!-- <a mat-list-item routerLink="" *ngFor="let nav of fillerNav">{{nav}}</a> --> 
+          
+           <a mat-list-item [routerLink]="['/landingpage/home']"><ion-icon class="list-icon" name="home"></ion-icon> Home</a>
+           <a mat-list-item [routerLink]="['/landingpage/product']"><ion-icon class="list-icon" name="basket"></ion-icon> Product</a>
+           <a mat-list-item [routerLink]="['/landingpage/job']"><ion-icon class="list-icon" name="glasses"></ion-icon>Jobs</a>
+           <a mat-list-item [routerLink]="['/landingpage']"><ion-icon class="list-icon" name="construct"></ion-icon> Update Password</a>
+           <a mat-list-item [routerLink]="['/landingpage/stock']"><ion-icon class="list-icon" name="settings"></ion-icon> Stock</a>
+           <a mat-list-item [routerLink]="['']"><ion-icon class="list-icon" name="key"></ion-icon> Logout</a>
+          </mat-nav-list>
+          <div class="ad-block">
+            <div class="text-center btn-align">
+              <button class="ad-post-button">Post your Ad</button>
+            </div>
+             <div class="ad-container">
+              <img class="img-responsive" src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">              
+             </div>
+          </div>
+          <div class="version">
+            <h6>version 1.0</h6>
+          </div>
+        </mat-sidenav>
+    
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+         
+          
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    
+  

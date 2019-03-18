@@ -1,5 +1,7 @@
 {
   "name": "onlineshop",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

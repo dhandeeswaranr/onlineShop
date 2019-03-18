@@ -1,0 +1,71 @@
+
+
+
+
+
+<!-- <ion-content>
+  
+
+    
+      <div class="container">
+          
+              <div class="row" class="fixed-row">
+                  
+                    <div class="col-lg-12 col-12 col-md-12 col-xs-12">
+                        
+                        <ion-searchbar name="search" [(ngModel)]="searchText" type="text" autocomplete="off" placeholder="search the product name"></ion-searchbar>
+                      </div>
+              </div>  
+     
+        <div class="row" >
+
+            <div class="col-6 col-md-6 col-xs-6 col-lg-6 " *ngFor="let hero of datafill | filter:searchText">
+             
+             <mat-card class="list-view">
+                 {{hero.company}} <br/>
+                 <hr>
+                 {{hero.category}}
+               </mat-card>
+             
+         </div>
+       
+         </div>
+      </div>
+    
+<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content> -->
+
+    
+  
+ <div class="fixed">
+    
+    <ion-searchbar name="search" [(ngModel)]="searchText" type="text" autocomplete="off" placeholder="search"></ion-searchbar>
+    
+ </div>
+<ion-content>
+
+    <div class="container cont-top">
+        <div class="row">
+            <div class="col-6 col-md-6 col-xs-6 col-lg-6 " *ngFor="let hero of datafill | filter:searchText">
+                <mat-card class="list-view">
+                  <div class="tit">
+                      {{hero.company}}
+                  </div>
+                    <div class="brand-img">
+                        <img class="img-responsive" src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                    </div>
+                    <div class="text-center">
+                        {{hero.category}}
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+  </ion-content>
+
+    

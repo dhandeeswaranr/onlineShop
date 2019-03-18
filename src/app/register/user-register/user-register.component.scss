@@ -1,0 +1,66 @@
+:host{
+    background-color: darkcyan;
+}
+ion-card{
+    background: transparent;
+    color: #fff;
+    box-shadow: none !important;
+    -webkit-box-shadow:none;
+}
+.card_title{
+    text-align: center;
+    color: #fff;
+}
+
+.vertical-align-content > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
+.con{
+    position: relative;
+    margin: 0 auto;
+}
+
+.vc{
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 99%;
+}
+
+/deep/ .native-input{
+    border-bottom: 1px solid #fff !important;
+    margin-bottom: 15px;
+}
+.user_photo{
+    font-size: 100px;
+}
+
+.customInput{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    margin-bottom: 15px;
+}
+input:focus{
+//border: none;
+border-bottom: 2px solid yellow;
+outline: none;
+}
+.signup-form{
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.custom-button{
+    //width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,4 +1,24 @@
 .welcome-card ion-img {
-  max-height: 35vh;
+ // max-height: 35vh;
   overflow: hidden;
+}
+img{
+  width: 99%;
+  //height: 35vh;
+}
+
+.header-color{
+  background-color: #273746;
+}
+
+/deep/ .swiper-slide img{
+max-height: 300px;
+}
+
+.container-bck{
+  background-image: url('https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 300px;
 }
